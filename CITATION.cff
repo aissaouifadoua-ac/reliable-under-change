@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper and this software."
+title: "Reliable under change: code and experiments"
+type: software
+license: MIT
+authors:
+  - family-names: Aissaoui
+    given-names: Fadoua
+    affiliation: "ENSAO, University Mohamed First, Oujda, Morocco"
+    orcid: "https://orcid.org/0009-0001-0765-8548"
+  - family-names: Abdelmalek
+    given-names: El Mahdi
+    affiliation: "ENSAO, University Mohamed First, Oujda, Morocco"
+    orcid: "https://orcid.org/0000-0002-8301-0284"
+doi: "10.5281/zenodo.XXXXXXX"
+preferred-citation:
+  type: article
+  title: "Reliable under change: adaptive conformal calibration and attribution-based drift monitoring for energy forecasting under distribution shift"
+  authors:
+    - family-names: Aissaoui
+      given-names: Fadoua
+    - family-names: Abdelmalek
+      given-names: El Mahdi
+  journal: "Sustainable Energy, Grids and Networks"
+  status: submitted
+  year: 2026

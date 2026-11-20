@@ -1,0 +1,9 @@
+,fraction_calibrated
+static_equiv02,0.041666666666666664
+static_equiv05,0.25
+windowed_equiv02,0.5833333333333334
+windowed_equiv05,0.875
+adaptive_equiv02,1.0
+adaptive_equiv05,1.0
+agaci_equiv02,1.0
+agaci_equiv05,1.0

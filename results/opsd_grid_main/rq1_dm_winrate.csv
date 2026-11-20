@@ -1,0 +1,13 @@
+dataset,backbone,horizon,DM_gbm_vs_persistence_p,DM_gbm_vs_seasonal_naive_p,DM_gbm_vs_ridge_p,DM_ridge_vs_persistence_p,DM_ridge_vs_seasonal_naive_p
+opsd,gbm,1,1.0,1.0,1.0,0.0,0.0
+opsd,gbm,24,1.0,1.0,1.0,0.0,0.0
+opsd,ridge,1,0.0,0.0,0.0,1.0,1.0
+opsd,ridge,24,0.0,0.0,0.0,1.0,1.0
+uci,gbm,1,1.0,1.0,1.0,0.0,0.0
+uci,gbm,24,1.0,1.0,0.5,0.0,0.0
+uci,ridge,1,0.0,0.0,0.0,1.0,1.0
+uci,ridge,24,0.0,0.0,0.0,1.0,1.0
+unisolar,gbm,1,1.0,1.0,1.0,0.0,0.0
+unisolar,gbm,24,1.0,1.0,0.0,0.0,0.0
+unisolar,ridge,1,0.0,0.0,0.0,1.0,1.0
+unisolar,ridge,24,0.0,0.0,0.0,1.0,1.0

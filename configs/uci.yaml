@@ -1,0 +1,31 @@
+# UCI household power — secondary confirmatory dataset (Pre-Registration §2).
+seed: 7
+dataset:
+  name: uci
+  n: null                  # use full series
+  target: load
+  horizon: 1               # sweep [1, 6, 24] across runs
+  loader_kwargs: {}
+features:
+  lags: [1, 24, 168]
+  rolling: [24, 168]
+  calendar: true
+split: {train: 0.6, calibrate: 0.2, test: 0.2}
+uq:
+  nominal: 0.90
+  adaptive_conformal: {gamma: 0.01}
+drift:
+  page_hinkley: {delta: 0.005, lambda_: 50, alpha: 0.9999}
+  adwin: {delta: 0.002}
+  psi: {bins: 10}
+  explanation_shift: {n_base: 500, k: 2.5, ema_alpha: 0.3}
+adaptation:
+  strategies: [none, recalibrate, retrain]
+  trigger: explanation
+scenario:
+  kind: injected_drift     # normal | seasonal | injected_drift | missing | noise
+  injected: {start_frac: 0.5, magnitude: 1.5}
+model:
+  backbone: gbm            # gbm=LightGBM (install) -> HistGBR fallback
+stats: {n_boot: 1000, block: 24}
+output_dir: results/uci

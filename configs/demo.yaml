@@ -1,0 +1,39 @@
+# Demo config — runs end-to-end on synthetic drifting data with core deps only.
+# Mirrors the frozen design in Pre-Registration.md (scaled down for a fast smoke run).
+seed: 7
+dataset:
+  name: synthetic          # synthetic | opsd | uci | unisolar
+  n: 6000                  # hourly steps
+  target: load
+  horizon: 1               # confirmatory run sweeps [1, 6, 24]
+features:
+  lags: [1, 24, 168]
+  rolling: [24]            # rolling mean/std windows
+  calendar: true
+split:
+  train: 0.6
+  calibrate: 0.2
+  test: 0.2
+uq:
+  nominal: 0.90            # primary interval; report 0.80/0.95 in full run
+  adaptive_conformal:
+    gamma: 0.01            # ACI learning rate (Gibbs-Candes)
+drift:
+  page_hinkley: {delta: 0.005, lambda_: 50, alpha: 0.9999}
+  adwin: {delta: 0.002}
+  psi: {bins: 10}
+  explanation_shift: {n_base: 200, k: 2.0, ema_alpha: 0.5}
+adaptation:
+  strategies: [none, recalibrate]     # full run adds: retrain
+  trigger: explanation                # error | explanation
+scenario:
+  kind: injected_drift    # normal | seasonal | injected_drift | missing | noise
+  injected:
+    start_frac: 0.5       # drift injected at this fraction of the TEST set
+    magnitude: 1.5        # multiplier on a feature->target coefficient
+model:
+  backbone: gbm           # gbm (LightGBM->HistGBR fallback) | ridge | patchtst
+stats:
+  n_boot: 1000
+  block: 24
+output_dir: results/demo

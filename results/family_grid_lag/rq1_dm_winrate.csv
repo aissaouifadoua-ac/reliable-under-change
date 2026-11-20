@@ -1,0 +1,5 @@
+dataset,horizon,DM_gbm_vs_persistence_p,DM_gbm_vs_seasonal_naive_p,DM_gbm_vs_ridge_p
+opsd,1,1.0,1.0,1.0
+opsd,24,1.0,1.0,1.0
+uci,1,1.0,1.0,1.0
+uci,24,1.0,1.0,0.5

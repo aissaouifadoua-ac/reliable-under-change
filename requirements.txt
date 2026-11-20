@@ -1,0 +1,22 @@
+# Minimum versions. For the exact environment used for the paper install
+# requirements-lock.txt instead (`make env`).
+# Core (required).
+# numpy pinned <2 so scipy/lightgbm/shap share one ABI (numpy 2 broke scipy in
+# a mixed env); 1.26.4 is the version the reported results were produced with.
+numpy>=1.24,<2
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+statsmodels>=0.14
+pyyaml>=6.0
+matplotlib>=3.7
+
+# Optional (auto-detected; graceful fallbacks if absent).
+# Install for the full confirmatory run:
+lightgbm>=4.0        # primary backbone (falls back to sklearn HistGradientBoosting)
+shap>=0.44           # SHAP attributions (falls back to permutation importance)
+torch>=2.0           # PatchTST/LSTM deep backbone (falls back to skipping deep models)
+river>=0.21          # reference ADWIN/Page-Hinkley (we ship numpy versions too)
+
+# Dev
+pytest>=7.4

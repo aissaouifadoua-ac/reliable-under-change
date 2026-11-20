@@ -1,0 +1,9 @@
+dataset,scenario,page_hinkley_FAR_mean,page_hinkley_FAR_std,page_hinkley_lead_mean,page_hinkley_lead_std,explanation_shift_FAR_mean,explanation_shift_FAR_std,explanation_shift_lead_mean,explanation_shift_lead_std
+opsd,injected_drift,0.9918130990415336,0.0,0.0,0.0,0.009984025559105431,0.0,-102.0,0.0
+opsd,missing,,,,,,,,
+opsd,noise,,,,,,,,
+opsd,normal,,,,,,,,
+uci,injected_drift,0.0,0.0,-25.0,0.0,0.019556333917104495,0.0,-50.0,0.0
+uci,missing,,,,,,,,
+uci,noise,,,,,,,,
+uci,normal,,,,,,,,
