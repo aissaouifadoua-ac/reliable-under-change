@@ -12,7 +12,7 @@ authors:
     given-names: El Mahdi
     affiliation: "ENSAO, University Mohamed First, Oujda, Morocco"
     orcid: "https://orcid.org/0000-0002-8301-0284"
-doi: "10.5281/zenodo.XXXXXXX"
+doi: "https://doi.org/10.5281/zenodo.24418178"
 preferred-citation:
   type: article
   title: "Reliable under change: adaptive conformal calibration and attribution-based drift monitoring for energy forecasting under distribution shift"
